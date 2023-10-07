@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Student Portfolio</title>
+    <!-- BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <!--External link for getting customizable font-->
+    <script
+      src="https://kit.fontawesome.com/3e016f99a8.js"
+      crossorigin="anonymous"
+    ></script>
+    
+  </head>
+  <body>
+    <!--create a header for the portfolio website-->
+    
+    <div id="header">
+      <div class="container">
+        <!--add a navigation bar-->
+        <nav id="navbar">
+          <!--Add logo (J)-->
+          <img src="images/logo.png" class="logo" alt="logo" />
+
+          <!--add links inside the navigation bar-->
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contacts</a></li>
+            <!--used to close menu for small screens-->
+            <i class="fa-solid fa-x" onclick="closemenu()"></i>
+          </ul>
+          <!--used to open menu for small screens-->
+          <i class="fa-solid fa-bars" onclick="openmenu()" id="solidbars"></i>
+        </nav>
+    
+        <!--Adds text for the header-->
+        <div class="header-text">
+          <p>College Student</p>
+          <h1>
+            Hi, I'm
+            <span
+              >John Kirsten<br />
+              S. Lopez</span>
+         <h1 class="mobile-text">I'm a <span class="auto-type"></span></h1>
+         <!--create container for  animated text-->
+         <section class="hidden">
+         <p>Creative, Innovative, and Inventive Visionary.</p>
+         <div class="logos">
+          <div class="hidden-logo-1"><i class="fa-brands fa-html5"></i><a href="https://www.youtube.com/watch?v=ok-plXXHlWw">HTML</a></div>
+          <div class="hidden-logo-2"><i class="fa-brands fa-css3-alt" ></i><a href="https://www.youtube.com/watch?v=OEV8gMkCHXQ">CSS</a><div></div></div>
+            <div class="hidden-logo-3"><i class="fa-brands fa-square-js"></i><a href="https://www.youtube.com/watch?v=DHjqpvDnNGE">Javascript</a></div>
+         </div>
+         </section>
+        </div>
+       </div>
+      </div>
+   
+
+
+    <!--Add container for the about me section-->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/USER.png" alt="me" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="subtitle">About Me</h1>
+            <p class="p-aboutme">
+              Greetings! <span3>I'm John Kirsten S. Lopez</span3>, a student in
+              <span4>Pangasinan State University</span4> taking up Computer
+              Engineering. My interest in technology and coding has driven me to
+              delve into the exciting realms of software development and
+              electronics. I'm currently enrolled at Pangasinan State
+              University, where I'm not only sharpening my academic skills but
+              also actively seeking opportunities to apply my knowledge
+              creatively.<br />
+              I am proficient in
+              <span1>HTML, CSS, Javascript, C++, and Python</span1>, these
+              languages are not just tools for digital solutions but also
+              channels for my creativity and problem-solving prowess. One of my
+              standout achievements is crafting a
+              <span2>hydroponics system using Arduino</span2>. Merging my
+              passion for programming and electronics, this project exemplifies
+              my drive to contribute towards technology.<br />
+              Beyond my technical pursuits, I'm an advocate for continual
+              learning and personal growth. Every project is an avenue to expand
+              my skill set and embrace fresh challenges. Whether I'm coding,
+              experimenting with hardware, or relishing life's simple joys, I'm
+              a believer in growth. In the dynamic world of technology,
+              I'm thrilled to be part of the new generation of creators and
+              innovators.<br />
+              My aim is not just academic excellence but to make a meaningful
+              impact by employing my skills to inspire and enhance lives. Thank
+              you for visiting my portfolio. Explore my projects, reach out, and
+              join me on my journey to transform the future through coding and
+              technology.
+            </p>
+            <!--Create tabs for skills, experience and education-->
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <!--create tab contents-->
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Programming</span><br />C++, Java, Python</li>
+                <li><span>Web Development</span><br />Front-end Development</li>
+                <li>
+                  <span>Arduino-focused C++ programming</span><br />Hydroponics,
+                  Embedded Systems, Robotics
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2023 - Current</span><br />Web Development</li>
+                <li>
+                  <span>2021 - 2022</span><br />Arduino Focused Projects, Python
+                  Projects
+                </li>
+                <li>
+                  <span>2020 - 2021</span><br />C++, Java, Game Development
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2021 - Current</span><br />Pangasinan State University,
+                  Urdaneta City
+                </li>
+                <li>
+                  <span>2018 - 2020</span><br />New Era University, Quezon City
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Add container for the about services section-->
+      <div id="services">
+        <div class="container">
+          <h1 class="subtitle">My Services</h1>
+          <div class="services-list">
+            <div>
+              <i class="fa-solid fa-code"></i>
+              <h2>Web Development</h2>
+              <p>
+                I craft user-friendly and visually appealing websites. Using
+                HTML, CSS, and JavaScript, I can bring your ideas to life,
+                ensuring a seamless and engaging user experience. <br>
+                <a href="https://drive.google.com/drive/folders/1pnlJZsacN2tQ5wiZi5S4rNIwD66DXj4T?usp=sharing" class="learnmore-web">Learn More</a>
+              </p>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-microchip"></i>
+              <h2>Arduino Projects</h2>
+              <p>
+                I can turn your innovative ideas into reality using Arduino
+                boards and programming. Whether it's automation, robotics, or
+                interactive gadgets, I'm here to make your projects come to
+                life. <br>
+                <a href="https://id.arduino.cc/?_gl=1*1k9tps5*_ga*MTIzODMyODAwNC4xNjk2NTcwNzEz*_ga_NEXN8H46L5*MTY5NjU3MDcxMi4xLjEuMTY5NjU3MDc3NS4wLjAuMA.." class="learnmore-arduino">Learn More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Creating a portfolio section-->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="subtitle">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work1.png" alt="Work 1" width="300" height="300" />
+            <div class="layer">
+              <h3>Hydroponics Project #1</h3>
+              <p>
+                A hydroponics monitoring system that keeps track of the
+                temperature, humidity, pH level, water level, etc.
+              </p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work2.png" alt="Work 2" width="300" height="300" />
+            <div class="layer">
+              <h3>Hydroponics Project #2</h3>
+              <p>Another angle of the project.</p>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work3.png" alt="Work 3" width="300" height="300" />
+            <div class="layer">
+              <h3>Responsive Card Layout</h3>
+              <p>
+                A website showcasing a bunch of cards, their titles, and
+                descriptions with responsiveness.
+              </p>
+              <a href="https://rudeus1999.github.io" class="cardlayout-link"><i class="fa-solid fa-link"></i></a>
+            </div>
+          </div>
+        </div>
+        <!--Add a link for see more -->
+        <a href="https://drive.google.com/drive/folders/1-wwzO29pAuTMp1DsRe6j1dL4hFeom_rm?fbclid=IwAR1UpuwYx_pYrZfbiY3ArooetdBWIQc1pXW8nKLhC21oSaOuofsWlFumhY8" class="btn">See More</a>
+      </div>
+    </div>
+    <!--Create a section for Contacts-->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="subtitle">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i><a href="mailto:autumnfallleaves12@gmail.com" class="btn btn-danger btn-sm">autumnfallleaves12@gmail.com</a></p>
+            <p><i class="fa-solid fa-phone"></i>09287596829</p>
+            <!--Add links for my social media-->
+            <div class="social-icons">
+              <a href="https://www.facebook.com/Primples" class="facebook-link"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://twitter.com/ReynaPrimples" class="twitter-link"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="https://www.instagram.com/primples_xl/" class="instagram-link"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/in/john-kirsten-lopez-a94100295/" class="linkedin-link"><i class="fa-brands fa-linkedin"></i></i></a>
+            </div>
+            <a href="images/my_cv.pdf" download class="btn btn2">Download CV</a>
+          </div>
+   
+          <div class="contact-right">
+            <!--Create a form for submitting message to me-->
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- BOOTSTRAP JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--Link the javascript file to HTML-->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+    //create a variable for autotyping 
+      var typed = new Typed(".auto-type", {
+          strings: ["Programmer.", "Designer.", "Builder."],
+          typeSpeed: 150,
+          backSpeed: 150,
+          loop: true
+      })</script>
+  </body> 
+</html>

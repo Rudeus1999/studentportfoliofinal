@@ -1,0 +1,620 @@
+/*Universal selector, gives style to all elements*/
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/*Styling the body with color and background*/
+body {
+  background: #080808;
+  color: #fff;
+}
+/*Styling the header id*/
+#header {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+/*Create padding for the navigation bar elements*/
+.container {
+  padding: 10px 10%;
+  z-index: 100000;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/*Style the logo(J)*/
+.logo {
+  width: 50%;
+  max-width: 200px;
+  padding: 0%;
+  margin: 0px;
+}
+/*Add a hover effect when the cursor lands upon the logo*/
+.logo:hover {
+  transition: 0.5s;
+  transform: scale(1.3);
+}
+
+/*styling all nav ul and li elements*/
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 20px;
+  position: relative;
+}
+/*Style the fonts*/
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*Add hover effect after cursor is pointed at the given elements*/
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0px;
+  bottom: -6px;
+  transition: 0.5s;
+}
+/*activates the hover effect*/
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/*Styling the header text*/
+.header-text {
+  margin-top: 0;
+  font-size: 30px;
+}
+/*For h1*/
+.header-text h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+/*for the <span>*/
+.header-text h1 span {
+  color: #ff0051;
+}
+
+/*About me section*/
+#about {
+  padding: 80px 0;
+  color: #ababab;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: flat;
+}
+
+.about-col-1 {
+  flex-basis: 35%;
+}
+.about-col-1 img {
+  padding-top: 150px;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.about-col-2 {
+  flex-basis: 60%;
+  padding-top: 100px;
+}
+
+.subtitle {
+  font-size: 60px;
+  font-weight: 600;
+  color: white;
+}
+
+/*add some custom styles for some of the text in p*/
+.p-aboutme {
+  text-align: justify;
+}
+
+.p-aboutme span1 {
+  color: red;
+}
+.p-aboutme span2 {
+  color: green;
+}
+
+.p-aboutme span3 {
+  color: blue;
+}
+.p-aboutme span4 {
+  color: yellow;
+}
+
+/*Create styles for the tab-titles section*/
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+/*Create styles for the tab-links section*/
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0px;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 100%;
+}
+
+/*Create styles for the tab-contents section*/
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 14px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+/*add style for services section*/
+#services {
+  padding: 30px, 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 30px;
+  display: inline-block;
+}
+
+.services-list div:hover {
+  background: rgba(71, 23, 23, 0.5);
+  transform: translateY(-10px);
+}
+
+.learnmore-arduino:hover {
+  color: #0a66c2;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+.learnmore-web:hover {
+  color: #0a66c2;
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+
+/*Style the Portfolio section*/
+#portfolio {
+  padding: 50px 0;
+}
+
+.work-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.work {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.cardlayout-link:hover {
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+/*style the Layer section of the portfolio*/
+
+.layer {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.layer h3 {
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.layer a {
+  margin-top: 20px;
+  color: #ff004f;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.work:hover img {
+  transform: scale(1.1);
+}
+
+.work:hover .layer {
+  height: 100%;
+}
+
+/*Add style for button for see more*/
+.btn {
+  display: block;
+  margin: 50px auto;
+  width: fit-content;
+  border: 1px solid #ff004f;
+  padding: 14px 50px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: background 0.5s;
+}
+
+.btn:hover {
+  background: #ff004f;
+}
+
+/*Add styles for the contacts*/
+.contact-left {
+  flex-basis: 35%;
+}
+
+.contact-right {
+  flex-basis: 60%;
+}
+
+.contact-left p {
+  margin-top: 30px;
+}
+
+.contact-left p i {
+  color: #ff004f;
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.social-icons {
+  margin-top: 30px;
+}
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+/*Add hover effects for each social icon*/
+.facebook-link:hover {
+  color: #3b5998;
+  transform: translateY(-5px) scale(1.5);
+  transition: 0.5s;
+}
+
+.twitter-link:hover {
+  color: #ff004f;
+  transform: translateY(-5px) scale(1.5);
+  transition: 0.5s;
+}
+
+.instagram-link:hover {
+  background-image: linear-gradient(
+    to bottom,
+    #515bd4,
+    #8134af,
+    #dd2a7b,
+    #feda77,
+    #f58529
+  );
+  border-radius: 4px;
+  transform: translateY(-5px) scale(1.5);
+  transition: 0.5s;
+}
+
+.linkedin-link:hover {
+  color: #0a66c2;
+  transform: translateY(-5px) scale(1.5);
+  transition: 0.5s;
+}
+
+/*Style CV button*/
+.btn.btn2 {
+  display: inline-block;
+  background-color: #ff004f;
+}
+
+/*Style the form in contacts*/
+.contact-right form {
+  width: 100%;
+}
+form input,
+form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: #262626;
+  padding: 15px;
+  margin: 15px 0;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 6px;
+}
+/*add styles for the form submit button*/
+form .btn2 {
+  padding: 14px 60px;
+  font-size: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/*add styles for nav bar small screen*/
+nav .fa-solid {
+  display: none;
+}
+
+/* Style the mailme link */
+
+/*CSS for small screens*/
+@media only screen and (max-width: 767px) {
+  
+  .header-text {
+    margin-top: 100%;
+    font-size: 16px;
+  }
+  .mobile-text {
+    font-size: 14px; /* Adjust the font size for mobile */
+  }
+
+  .header-text h1 {
+    font-size: 30px;
+  }
+  #navbar .fa-solid {
+    display: block;
+    font-size: 25px;
+  }
+  nav ul {
+    background: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .header-text {
+    text-align: center;
+  }
+/*Hide the hidden class in smaller screen*/
+  .hidden{
+    display: none;
+  }
+
+  .subtitle {
+    font-size: 40px;
+  }
+  .about-col-1,
+  .about-col-2 {
+    flex-basis: 100%;
+  }
+
+  .about-col-1 img {
+    display: none;
+  }
+  .about-col-1 {
+    margin-bottom: 30px;
+  }
+
+  .about-col-2 {
+    font-size: 14px;
+  }
+
+  .tab-links {
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  /*CSS adjust the form to align with the contacts on the left */
+  .contact-left,
+  .contact-right {
+    flex-basis: 100%;
+  }
+
+  
+}
+
+/*Add style for confirmed submission text*/
+#msg {
+  color: #61b752;
+  margin-top: -30px;
+  display: block;
+}
+
+
+/*style the section*/
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  min-height: 100vh;
+}
+
+/*Style the typewriter effect in CSS*/
+.typewriter {
+  width: 100%;
+  height: 100%;
+}
+
+/*color the font of the paragraph in section*/
+
+/*Style the font of the animated part of the paragraph*/
+section p {
+  color: whitesmoke;
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/*style the logos of the section*/
+.logos {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.hidden-logo-1 {
+  font-size: 60px;
+  transition: 1s;
+}
+
+.hidden-logo-1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.hidden-logo-1:hover {
+  color: #e44d26;
+  transform: translateX(-10px) translateY(-2px);
+}
+
+.hidden-logo-2 {
+  font-size: 60px;
+  transition: 1s;
+}
+.hidden-logo-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.hidden-logo-2:hover {
+  color: #2965f1;
+  border-width: 100%;
+  transform: translateX(-10px) translateY(-2px);
+}
+
+.hidden-logo-3 {
+  font-size: 55px;
+  transition: 1s;
+}
+
+.hidden-logo-3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.hidden-logo-3:hover {
+  color: #f0db4f;
+  border-width: 10000px;
+  transform: translateX(-10px) translateY(-2px);
+}
+
